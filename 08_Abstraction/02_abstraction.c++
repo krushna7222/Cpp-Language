@@ -21,7 +21,7 @@ public:
     void Deposite(int account_no, double deposited_ammount) override
     {
         accountno = account_no;
-        accountbalance = account_balance + deposited_ammount;
+        this->accountbalance = accountbalance + deposited_ammount;
         cout << "Congratulation Your Account Creadited by :- " << deposited_ammount << endl;
         // cout << "Your Account Balance is :- " << account_balance + deposited_ammount << endl;
     }
@@ -52,7 +52,8 @@ int main()
 {
     SavingAccount account;
     account.Deposite(111213, 500);
-    account.Deposite(111213, 300);
+    account.Deposite(111213, 500);
+    account.Withdraw(111213, 300);
     // account.Withdraw(111213, 550);
     account.Display();
 }
